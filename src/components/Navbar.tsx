@@ -15,7 +15,7 @@ export const Navbar = (props: Props) => {
                 <Link href="/" className="flex justify-center items-center">
                     <Image src={Logo} 
                     className="object-contain"
-                    width={120} height={30}
+                    width={120} height={20}
                     alt="logo" />
                 </Link>
                 <CustomButton 

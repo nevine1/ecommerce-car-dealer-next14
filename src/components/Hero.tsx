@@ -3,10 +3,12 @@ import React from 'react'
 import CustomButton from './customComponents/CustomButton';
 import Image from 'next/image'
 import ImageOne from '../../public/assets/imgs/hero.png'
+import {footerLinks } from '../components/constants/page'
 const Hero = () => {
   const handleScroll = () =>{
     console.log('hello this is my page ')
   }
+
   return (
     <div className="hero">
       <div className="flex-1 pt-36  padding-x">
