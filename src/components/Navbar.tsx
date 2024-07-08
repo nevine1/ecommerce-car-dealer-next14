@@ -9,7 +9,7 @@ interface Props {
 
 export const Navbar = (props: Props) => {
     return (
-        <header className="w-full relative z-10 bg-red-900">
+        <header className="w-full relative z-10 ">
            <nav className="max-w-[1440px] mx-auto flex justify-between
                 items-center sm:px-16 px-6 py-4">
                 <Link href="/" className="flex justify-center items-center">
@@ -18,17 +18,18 @@ export const Navbar = (props: Props) => {
                     width={120} height={20}
                     alt="logo" />
                 </Link>
-                <CustomButton 
-                    btnType="button" 
-                    title="sing in"
-                    btnStyles="bg-primary-blue "
-                />
+               
                 <ul className="flex items-center justify-center">
                     <li className="px-4"><Link href="/">Home</Link></li>
                     <li className="px-4"><Link href="/">Home</Link></li>
                     <li className="px-4"><Link href="/">Home</Link></li>
                     <li className="px-4"><Link href="/">Home</Link></li>
                 </ul>
+                <CustomButton 
+                    btnType="button" 
+                    title="sing in"
+                    btnStyles="bg-white text-primary-blue rounded-full "
+                />
            </nav>
         </header>
     )
