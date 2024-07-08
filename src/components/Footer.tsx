@@ -14,31 +14,33 @@ export const Footer = (props: Props) => {
     return (
         <div className="flex flex-col mt-4 border-t border-gray-200 text-black-100">
            <div className="flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6">
-            <div className="flex flex-col justify-start items-center gap6">
+            <div className="flex flex-col justify-start items-center gap-6 sm:py-1 py-4 ">
                 <Image src={ImageLogo} 
                 width={120} height={20}
                 alt="footer logo"
                 className="object-contain"
                 />
-                <p className="text-base text-gray-300 "></p>
             </div>
 
-            <div className="flex flex-col justify-start items-center py-3">
+            <div className="footer__links">
                 {
                   footerLinks.map((link) =>(
-                    <div key={link.title} className="flex flex-col items-center justify-start">
-                        <h2 className="text-semibold text-gray-900 bg-pink-200">{link.title}</h2>
+                    <div key={link.title} className="flex flex-col  py-4 justify-start">
+                        <h2 className="font-bold text-gray-900 ">{link.title}</h2>
                         {
                             link.links.map((item)=>(
-                                <Link href={`/item.url`}>{item.title}</Link>
+                                <Link href={`/item.url`} className="text-[15px] py-1">{item.title}</Link>
                             ))
                         }
                     </div>
                   ))  
                 }
            </div>
+        </div>
 
+        <div className="flex  items-center justify-center  border-t border-gray-100 sm:px-16 px-6 py-4">
+            <p className="text-[14px] text-gray-500">@2024 CarHub. All rights reserved</p>
         </div>
-        </div>
+    </div>
     )
 }
