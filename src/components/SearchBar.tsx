@@ -1,7 +1,7 @@
 "use client";
 import {useState } from 'react'
 import {CustomButton, SearchManufacture} from './page';
-import { manufacturers } from './constants/page';
+
 
 interface Props {
     
