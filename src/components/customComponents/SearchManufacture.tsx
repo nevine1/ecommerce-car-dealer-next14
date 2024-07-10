@@ -9,20 +9,22 @@ interface Props {
 
 const SearchManufacture = ({ manufacturer, setManufacturer }: SearchManufactureProps) => {
     const [query, setQuery] = useState('');
-    const filteredManufacturers = 
-        query ===  " " ? 
-        manufacturers : 
-        manufacturers.filter((item) =>(
-            item.toLowerCase()
-            .replace(/\s+/g,"")
-            .includes(item.toLowerCase().replace(/\s+/g,""))
-        ))
+   
+   const filteredManufacturers =
+    query === ""
+      ? manufacturers
+      : manufacturers.filter((item) =>
+          item
+            .toLowerCase()
+            .replace(/\s+/g, "")
+            .includes(query.toLowerCase().replace(/\s+/g, ""))
+        );
     return (
         <div className="flex flex-1 max-sm:w-full justify-start items-center">
-            <Combobox >
+            <Combobox value={manufacturer} onChange={setManufacturer}>
                 <div className="relative w-full">
                     <ComboboxInput
-                        className="w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full bg-light-white outline-none cursor-pointer text-sm"
+                        className="w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full bg-gray-200 outline-none cursor-pointer text-sm"
                         placeholder="Honda"
                         displayValue={(manufacturer:string) => manufacturer}
                         onChange={(e) =>setQuery(e.target.value)}
@@ -35,25 +37,17 @@ const SearchManufacture = ({ manufacturer, setManufacturer }: SearchManufactureP
                             afterLeave={() =>setQuery('')}
                             >
                             <ComboboxOptions>
-                                {
-                                    filteredManufacturers.length === 0 && query !=="" ? (
-                                        <ComboboxOption 
-                                            value={query}
-                                            className="cursor-default select-none py-2 pl-10 pr-4"
-                                        > 
-                                         Create " { query} "
+                               {
+                                    filteredManufacturers.map((item) =>(
+                                        <ComboboxOption value={item} key={item}
+                                            className={({active}) => `relative cursor-default select-none mt-1 py-2 pl-10 pr-4 
+                                                ${active ? `bg-primary-blue text-white rounded-l-full` : `text-gray-900`}
+                                            `}
+                                        >
+                                            {item}
                                         </ComboboxOption>
-                                    ):(
-                                        filteredManufacturers.map((item) =>(
-                                            <ComboboxOption key={item}
-                                                className=""
-                                            >
-                                                {item}
-                                            </ComboboxOption>
-                                        ))
-                                    )
-                                      
-                                }
+                                    ))
+                               }
                             </ComboboxOptions>
                         </Transition>
                 </div>
@@ -63,3 +57,4 @@ const SearchManufacture = ({ manufacturer, setManufacturer }: SearchManufactureP
 }
 
 export default SearchManufacture;
+
