@@ -14,7 +14,7 @@ export const Footer = (props: Props) => {
     return (
         <div className="flex flex-col mt-4 border-t border-gray-200 text-black-100">
            <div className="flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6">
-            <div className="flex flex-col justify-start items-center gap-6 sm:py-1 py-4 ">
+            <div className="flex flex-col justify-start items-center mt-3 gap-6 sm:py-1 py-4 ">
                 <Image src={ImageLogo} 
                 width={120} height={20}
                 alt="footer logo"

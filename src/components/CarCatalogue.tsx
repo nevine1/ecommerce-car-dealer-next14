@@ -11,10 +11,11 @@ const CarCatalogue = (props: Props) => {
             <p className="py-2">Explore the cars you might like</p>
         </div>
 
-        <div className="home__filters">
+        <div className="mt-12 w-full flex-between items-center flex-wrap gap-5">
             <SearchBar/>
-            <div className="home__filters-container">
-                <CustomFilter/>
+            <div className="flex justify-start flex-wrap items-center gap-2">
+                <CustomFilter title="fuel"/>
+                <CustomFilter title="year"/>
             </div>
         </div>
     </div>
