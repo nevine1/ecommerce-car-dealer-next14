@@ -7,7 +7,7 @@ interface Props {
     
 }
 
-export const Navbar = (props: Props) => {
+ const Navbar = (props: Props) => {
     return (
         <header className="w-full relative z-10 ">
            <nav className="max-w-[1440px] mx-auto flex justify-between
@@ -34,3 +34,5 @@ export const Navbar = (props: Props) => {
         </header>
     )
 }
+
+export default Navbar;

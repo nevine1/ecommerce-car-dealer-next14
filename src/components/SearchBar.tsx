@@ -1,6 +1,7 @@
 "use client";
 import {useState } from 'react'
-import {CustomButton, SearchManufacture} from './page';
+import CustomButton from '../components/customComponents/CustomButton';
+import  SearchManufacture from '../components/customComponents/SearchManufacture';
 
 
 interface Props {

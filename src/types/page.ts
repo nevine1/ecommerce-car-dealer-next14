@@ -12,3 +12,21 @@ export interface SearchManufactureProps {
     manufacturer: string;
     setManufacturer: (manufacturer: string) => void;
 }
+
+
+/* export interface Cars {
+    cars: []
+}
+ */
+export interface CarsListState{
+    isLoading: boolean;
+    carsError: string | null ; 
+    carsSuccess: string | null ;
+    cars: Car[]
+}
+
+export interface Car{
+    id: string;
+    year: string ; 
+    model: string; 
+}

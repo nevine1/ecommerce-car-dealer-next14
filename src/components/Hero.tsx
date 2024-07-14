@@ -3,7 +3,7 @@ import React from 'react'
 import CustomButton from './customComponents/CustomButton';
 import Image from 'next/image'
 import ImageOne from '../../public/assets/imgs/hero.png'
-import Image2 from '../../public/assets/imgs/hero-bg.png'
+/* import Image2 from '../../public/assets/imgs/hero-bg.png' */
 import {footerLinks } from '../components/constants/page'
 const Hero = () => {
   const handleScroll = () =>{
@@ -24,20 +24,24 @@ const Hero = () => {
           title="Explore Cars"
           btnStyles="bg-primary-blue text-white rounded-full mt-10"
             handleClick={handleScroll}
-          
         />
+        
       </div>
       <div className="hero__image-container">
         <div className="hero__image">
           <Image src={ImageOne} alt="hero image" 
             fill className="object-fit mt-12"
+            sizes="100vw"
+           
           />
           </div>
-          <div className="hero__image-overlay">
+          {/* <div className="hero__image-overlay">
             <Image src={Image2} alt="hero image" 
               fill className="object-fit "
+              sizes="100vw"
+              
             />
-          </div>
+          </div> */}
         
       </div>
 

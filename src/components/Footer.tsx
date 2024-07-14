@@ -7,10 +7,8 @@ interface Props {
     
 }
 
-export const Footer = (props: Props) => {
-    console.log(footerLinks);
-    console.log('helloooooooooooooo')
-    console.log('hello')
+ const Footer = (props: Props) => {
+   
     return (
         <div className="flex flex-col mt-4 border-t border-gray-200 text-black-100">
            <div className="flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6">
@@ -44,3 +42,6 @@ export const Footer = (props: Props) => {
     </div>
     )
 }
+
+
+export default Footer;
