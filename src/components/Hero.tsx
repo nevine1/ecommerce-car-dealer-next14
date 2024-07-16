@@ -2,13 +2,13 @@
 import React from 'react'
 import CustomButton from './customComponents/CustomButton';
 import Image from 'next/image'
-import ImageOne from '../../public/assets/imgs/hero.png'
-/* import Image2 from '../../public/assets/imgs/hero-bg.png' */
+import ImageOne from '../../public/assets/imgs/hero.png';
 import {footerLinks } from '../components/constants/page'
 const Hero = () => {
-  const handleScroll = () =>{
+
+  /* const handleScroll = () =>{
     console.log('hello this is my page ')
-  }
+  } */
 
   return (
     <div className="hero">
@@ -23,7 +23,7 @@ const Hero = () => {
         <CustomButton
           title="Explore Cars"
           btnStyles="bg-primary-blue text-white rounded-full mt-10"
-            handleClick={handleScroll}
+            /* handleClick={handleScroll} */
         />
         
       </div>

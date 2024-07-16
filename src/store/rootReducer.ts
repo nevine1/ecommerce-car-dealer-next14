@@ -1,10 +1,10 @@
 
 import { combineReducers } from '@reduxjs/toolkit';
-
+import carsListReducer from './slices/carsListSlice';
 
 export const rootReducer = combineReducers({
-    name: 'carsList'
-})
+  cars: carsListReducer,
+});
 
 export type RootState = ReturnType<typeof rootReducer>;
 

@@ -18,15 +18,18 @@ export interface SearchManufactureProps {
     cars: []
 }
  */
-export interface CarsListState{
+export interface CarsListState {
     isLoading: boolean;
-    carsError: string | null ; 
-    carsSuccess: string | null ;
-    cars: Car[]
-}
+    carsError: string | null;
+    carsSuccess: string | null;
+    cars: Car[];
+  }
 
-export interface Car{
-    id: string;
-    year: string ; 
-    model: string; 
-}
+
+export interface Car {
+    id: number;
+    model: string;
+    make: string;
+    year: number;
+
+  }

@@ -1,9 +1,14 @@
-import React from 'react'
+"use client"
+import { useEffect } from 'react'
 import SearchBar from './SearchBar'
 import CustomFilter from './customComponents/CustomFilter'
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../src/store/store'
 type Props = {}
 
 const CarCatalogue = (props: Props) => {
+  const dispatch = useDispatch(); 
+  const { cars, isLoading, carsError } = useSelector((state: RootState) => state.cars); 
   return (
     <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className="flex flex-col justify-start ">
