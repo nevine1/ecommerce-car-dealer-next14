@@ -4,11 +4,16 @@ import SearchBar from './SearchBar'
 import CustomFilter from './customComponents/CustomFilter'
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../src/store/store'
+import { fetchAllCars } from '../store/slices/carsAsync'
 type Props = {}
 
 const CarCatalogue = (props: Props) => {
   const dispatch = useDispatch(); 
   const { cars, isLoading, carsError } = useSelector((state: RootState) => state.cars); 
+  
+  useEffect(() => {
+    dispatch(fetchAllCars())
+  }, [])
   return (
     <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className="flex flex-col justify-start ">
