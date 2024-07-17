@@ -32,11 +32,9 @@ const CarCatalogue = (props: Props) => {
               {
                 cars.length > 0 && (
                   cars.map((car, index) =>(
-                    <div className="bg-white shadow-lg rounded-md shadow-slate-100 p-5 my-4"
-                        
-                      >
+                    
                       <CarCard car={car}/>
-                    </div>
+                
 
                   ))
                 )
