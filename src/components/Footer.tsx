@@ -22,7 +22,7 @@ interface Props {
 
             <div className="footer__links">
                 {
-                  footerLinks.map((link) =>(
+                  footerLinks.map((link, index) =>(
                     <div key={link.title} className="flex flex-col  py-4 justify-start">
                         <h2 className="font-bold text-gray-900 ">{link.title}</h2>
                         {

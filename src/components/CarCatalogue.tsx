@@ -4,7 +4,8 @@ import SearchBar from './SearchBar'
 import CustomFilter from './customComponents/CustomFilter'
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../src/store/store'
-import { fetchAllCars } from '../store/slices/carsAsync'
+import { fetchAllCars } from '../store/slices/carsAsync';
+import { CarCard } from './CarCard';
 type Props = {}
 
 const CarCatalogue = (props: Props) => {
@@ -26,6 +27,20 @@ const CarCatalogue = (props: Props) => {
             <div className="flex justify-start flex-wrap items-center gap-2">
                 <CustomFilter title="fuel"/>
                 <CustomFilter title="year"/>
+            </div>
+            <div>
+              {
+                cars.length > 0 && (
+                  cars.map((car, index) =>(
+                    <div className="bg-white shadow-lg rounded-md shadow-slate-100 p-5 my-4"
+                        
+                      >
+                      <CarCard car={car}/>
+                    </div>
+
+                  ))
+                )
+              }
             </div>
         </div>
     </div>
