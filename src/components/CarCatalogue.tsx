@@ -28,17 +28,16 @@ const CarCatalogue = (props: Props) => {
                 <CustomFilter title="fuel"/>
                 <CustomFilter title="year"/>
             </div>
-            <div>
+            <div className=" bg-red-500 w-full items-center mx-auto grid grid-cols-4 md:grid-cols-3
+              sm:grid-cols-2 px-2 max-sm:grid-cols-1 gap-5">
               {
                 cars.length > 0 && (
                   cars.map((car, index) =>(
-                    
-                      <CarCard car={car}/>
-                
-
+                    <CarCard car={car}/>
                   ))
                 )
               }
+              
             </div>
         </div>
     </div>

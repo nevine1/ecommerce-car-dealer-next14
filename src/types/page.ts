@@ -6,7 +6,11 @@ export interface CustomButtonProps{
     title: string;
     btnStyles?: string;
     btnType?: "button" | "submit";
+    className?: string;
+    textStyles?:string;
     handleClick?: MouseEventHandler<HTMLButtonElement>;
+    isDisabled?: boolean;
+
 }
 
 export interface SearchManufactureProps {
